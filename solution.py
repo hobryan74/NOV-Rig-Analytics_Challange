@@ -205,10 +205,10 @@ while(line < 5000):
             count4+=1
             line+=1
 
-        elif(count3 < len(customer3)):
-            time = int(customer3[count3]['duration'])
+        elif(count1 < len(customer1)):
+            time = int(customer1[count1]['duration'])
             teller4[d]['Time'] += time
-            count3+=1
+            count1+=1
             line+=1
 
         elif(count2 < len(customer2)):
@@ -217,10 +217,10 @@ while(line < 5000):
             count2+=1
             line+=1
 
-        elif(count1 < len(customer1)):
-            time = int(customer1[count1]['duration'])
+        elif(count3 < len(customer3)):
+            time = int(customer3[count3]['duration'])
             teller4[d]['Time'] += time
-            count1+=1
+            count3+=1
             line+=1
         
 
