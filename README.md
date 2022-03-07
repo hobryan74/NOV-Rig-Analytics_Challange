@@ -10,5 +10,9 @@
 
   * Assumptions you made.
 
-  The customers are in already in "line"
+  The data is already sorted by cutomer/teller type and duration.
+
+  
   * If there are features you didn't have time to implement or would improve or do differently next time, describe the intended behavior.
+
+  only 149 tellers 
