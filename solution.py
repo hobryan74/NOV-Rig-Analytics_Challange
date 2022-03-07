@@ -90,16 +90,6 @@ for x in tellers['Teller']:
     else:
         print("issue")
 
-'''for x in customers['Customer']:
-    print()
-    for a in customer1:
-        print()
-    for b in customer2:
-        print()
-    for c in customer3:
-        print()
-    for d in customer4:
-        print()'''
 line = 0
 count1 = 0
 count2 = 0
@@ -241,14 +231,19 @@ while(line < 5000):
 '''print(len(customer1), len(customer2), len(customer3), len(customer4))
 print(len(teller1), len(teller2), len(teller3), len(teller4))'''
 
+tellernum=1
 for x in teller1:
-    print(teller1[x]["Time"])
+    print("Teller", tellernum,": Total Time: ", teller1[x]["Time"])
+    tellernum+=1
 for x in teller2:
-    print(teller2[x]["Time"])
+    print("Teller", tellernum,": Total Time: ",teller2[x]["Time"])
+    tellernum+=1
 for x in teller3:
-    print(teller3[x]["Time"])
+    print("Teller", tellernum,": Total Time: ",teller3[x]["Time"])
+    tellernum+=1
 for x in teller4:
-    print(teller4[x]["Time"])
+    print("Teller", tellernum,": Total Time: ",teller4[x]["Time"])
+    tellernum+=1
 
 
 
