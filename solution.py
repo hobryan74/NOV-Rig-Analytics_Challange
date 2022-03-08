@@ -1,57 +1,11 @@
 import json
 
-
-'''def scheduler(count1, count2, count3, count4, line, teller, customer1, customer2, customer3, customer4):
-    for a in teller:
-    
-        if(count1 < len(customer1)):
-            time = int(customer1[count1]['duration']) * float(teller[a]['Multiplier'])
-            teller[a]['Time'] += time
-            count1+=1
-            line+=1
-
-        elif(count4 < len(customer4)):
-            time = int(customer4[count4]['duration'])
-            teller[a]['Time'] += time
-            count4+=1
-            line+=1
-
-        elif(count3 < len(customer3)):
-            time = int(customer3[count3]['duration'])
-            teller[a]['Time'] += time
-            count3+=1
-            line+=1
-        
-        elif(count2 < len(customer2)):
-            time = int(customer2[count2]['duration'])
-            teller[a]['Time'] += time
-            count2+=1
-            line+=1
-
-
-        else:
-            print(line , "issue")
-        
-        return (line, count1, count2, count3, count4, teller, customer1, customer2, customer3, customer4)'''
-
-
 if __name__ == '__main__':
     customersData = open('dmv-appointment-scheduler\data-set\CustomerData.json')
     tellerData = open('dmv-appointment-scheduler\data-set\TellerData.json')
 
     customers = json.load(customersData)
     tellers = json.load(tellerData)
-
-    '''
-    for x in customers['Customer']:
-        print(x['type'])
-
-
-    for x in tellers['Teller']:
-        print(x['SpecialtyType'])'''
-
-    #tellerD['Teller'][0]['time'] = 20
-    #print(tellerD['Teller'][0]['time'])
 
     customer1 = {}
     customer2 = {}
@@ -62,6 +16,9 @@ if __name__ == '__main__':
     count2 = 0
     count3 = 0
     count4 = 0
+    
+    #this section is to seperate each categories into seperate dictionaries (Lines)
+
     for x in customers['Customer']:
 
         if(x['type'] == '1'):
@@ -132,16 +89,9 @@ if __name__ == '__main__':
     count3 = 0
     count4 = 0
 
+    #algorithm to assign customers to tellers
+
     while(line < len(customers['Customer'])):
-        '''if(line >= len(customers['Customer'])):
-                break
-        scheduler(count1, count2, count3, count4, line, teller1, customer1, customer2, customer3, customer4)
-
-        scheduler(count1, count2, count3, count4, line, teller2, customer1, customer2, customer3, customer4)
-
-        scheduler(count1, count2, count3, count4, line, teller3, customer1, customer2, customer3, customer4)
-
-        scheduler(count1, count2, count3, count4, line, teller4, customer1, customer2, customer3, customer4)'''
         
         for a in teller1:
             if(line >= len(customers['Customer'])):
@@ -274,8 +224,7 @@ if __name__ == '__main__':
                 print(line , "teller4 issue")
 
 
-    '''print(len(customer1), len(customer2), len(customer3), len(customer4))
-    print(len(teller1), len(teller2), len(teller3), len(teller4))'''
+    #displays the answers and total times for each teller
 
     tellernum=1
     for x in teller1:
@@ -290,8 +239,6 @@ if __name__ == '__main__':
     for x in teller4:
         print("Teller", tellernum,": Total Time: ",teller4[x]["Time"])
         tellernum+=1
-
-
 
 
 
